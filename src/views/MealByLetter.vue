@@ -1,9 +1,11 @@
 <template lang="">
-  <div class="flex justify-center gap-2 mt-2">
+  <h1 class="text-4xl font-bold m-4 text-orange-500">Search by letter</h1>
+  <div class="flex flex-wrap justify-center gap-3 p-8 mb-6">
     <router-link
       v-for="letter in letters"
       :key="letter"
       :to="{ name: 'byLetter', params: { letter } }"
+      class="w-2 h-2 flex items-center justify-center hover:text-orange-500 hover:scale-150 transition-all"
     >
       {{ letter }}
     </router-link>
@@ -16,7 +18,7 @@
     <h2 class="text-2xl font-bold">No meals found :)</h2>
     <p class="text-xl">Try another letter!</p>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-7">
     <MealItem :meal="meal" v-for="meal in meals" :key="meal.idMeal" />
   </div>
 </template>

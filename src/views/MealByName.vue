@@ -1,5 +1,7 @@
 <template lang="">
-  <div class="p-8 pb-0">
+  <h1 class="text-4xl font-bold m-4 text-orange-500">Search by Name</h1>
+
+  <div class="p-7 pb-0">
     <input
       type="text"
       class="rounded border-2 border-gray-200 w-full"
